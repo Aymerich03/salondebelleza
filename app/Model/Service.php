@@ -11,7 +11,8 @@ class Service extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'type';
+	public $displayField = 'name';
+
 
 /**
  * Validation rules
@@ -29,7 +30,7 @@ class Service extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'type' => array(
+		'name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

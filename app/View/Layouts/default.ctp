@@ -67,17 +67,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 
-					<a href="index.html"><img src="images/logo.png" alt=""></a>
+					<a href="index.html"><img src="/imagess/logo.png" alt=""></a>
 				</div>
 				<div class="top-nav">
-					<span class="menu"><img src="images/menu.png" alt=""> </span>
+					<span class="menu"><img src="/imagess/menu.png" alt=""> </span>
 					<ul>
-						<li class="active"><a href="index.html" class="scroll">Principal</a></li>
-						<li><a href="#about" class="scroll">Servicios</a></li>
-						<li><a href="#services" class="scroll">Services</a></li>
-						<li><a href="#gallery" class="scroll">Galería</a></li>
+						<li><?= $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'display')) ?></li>
+						<li>
+							<?php if($this->request->here == '/'): ?>
+			    		    <a href="#about" class="scroll">Servicios</a>
+				    		<?php else: ?>
+				    		    <?= $this->Html->link(__('Servicios'), array('controller' => 'services', 'action' => 'add')) ?>
+				    		<?php endif; ?></li>
+						<li><?= $this->Html->link(__('Galería'), array('controller' => 'services', 'action' => 'galery')) ?></li>
 						<li><a href="#team" class="scroll">Profesionales</a></li>
-						
 						<li><?= $this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
 						<div class="clearfix"> </div>
 					</ul>
@@ -98,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="banner-top">
 				<div class=" new-more1">
 					<div class="col-md-2 six">
-						<img class="img-responsive" src="images/te.jpg" alt="">
+						<img class="img-responsive" src="imagess/te.jpg" alt="">
 					</div>
 					<div class="col-md-10 six1">
 						<h1>It is a long established fact that</h1>
@@ -112,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    		<?php endif; ?>
 	</div>
 	<!--content-->
-	<div class="content">
+	<div class="content" style = "margin-top: -60px">
 		
 
 			<?php echo $this->Session->flash(); ?>
@@ -125,8 +128,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="footer-top">
 					<a href="https://www.facebook.com/chineate/"><i ></i></a>
-					<p class="footer-in">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain </p>
-					<p class="footer-class"> © 2015 Ecospa . All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+					<p class="footer-in">Cualquier comentario, duda o sugerencia no dude en contactarnos, estamos para servirle.</p>
+					<p class="footer-class"> © 2015 Ecospa . All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a>.Diseño utilizado para Trabajo Comunal 487 2015, Universidad de Costa Rica  </p>
 				</div>
 				<script type="text/javascript">
 					$(document).ready(function() {

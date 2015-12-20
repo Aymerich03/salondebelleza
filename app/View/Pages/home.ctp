@@ -1,6 +1,4 @@
-<!--team-->
 <div class="team" id="team">
-
 	<div class="container">
 		<!--SERVICIOS-->
 		<div class="content-middle" id="about">
@@ -11,11 +9,13 @@
 				<div class="col-md-6 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Uñas</h5>
-							<p>Para que tus manos luzcan espectaculares ofrecemos manicure, pedicure, esmaltado, uñas acrílicas, shellac y mucho más...</p>
+							
+							<p>Para que tus manos luzcan espectaculares ofrecemos manicure, pedicure...</p>
+							<li><?= $this->Html->link(__('Descubre más'), array('controller' => 'services', 'action' => 'nails')) ?></li>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -23,11 +23,11 @@
 				<div class="col-md-6 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev1.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev1.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Cabello</h5>
-							<p>Realizamos tratamiento para el cabello y masaje del cuero cabelludo, teñido, luces, corte para caballero y dama, lavado y secado, peinados y mucho más...</p>
+							<!--p>Realizamos tratamiento para el cabello y masaje del cuero cabelludo, teñido, luces, corte para caballero y dama, lavado y secado, peinados y mucho más...</p-->
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -39,11 +39,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev2.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev2.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Micropicmentación</h5>
-							<p>Embellecemos tus rasgos faciales con el uso de esta técnica, de una manera semipermanente para realzar tu belleza. </p>
+							<!--p>Embellecemos tus rasgos faciales con el uso de esta técnica, de una manera semipermanente para realzar tu belleza. </p-->
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -51,11 +51,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev3.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev3.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Dermoabrasión</h5>
-							<p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p>
+							<!--p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p-->
 
 						</div>
 						<div class="clearfix"> </div>
@@ -64,11 +64,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev3.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev3.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Limpieza facial</h5>
-							<p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p>
+							<!--p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p-->
 
 						</div>
 						<div class="clearfix"> </div>
@@ -80,11 +80,11 @@
 				<div class="col-md-6 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Depilación láser</h5>
-							<p>Para que tus manos luzcan espectaculares ofrecemos manicure, pedicure, esmaltado, uñas acrílicas, shellac y mucho más...</p>
+							<!--p>Para que tus manos luzcan espectaculares ofrecemos manicure, pedicure, esmaltado, uñas acrílicas, shellac y mucho más...</p-->
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -92,11 +92,11 @@
 				<div class="col-md-6 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev1.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev1.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Masajes</h5>
-							<p>Realizamos tratamiento para el cabello y masaje del cuero cabelludo, teñido, luces, corte para caballero y dama, lavado y secado, peinados y mucho más...</p>
+							<!--p>Realizamos tratamiento para el cabello y masaje del cuero cabelludo, teñido, luces, corte para caballero y dama, lavado y secado, peinados y mucho más...</p-->
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -107,11 +107,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev2.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev2.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Ultracavitación</h5>
-							<p>Embellecemos tus rasgos faciales con el uso de esta técnica, de una manera semipermanente para realzar tu belleza. </p>
+							<!--p>Embellecemos tus rasgos faciales con el uso de esta técnica, de una manera semipermanente para realzar tu belleza. </p-->
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -119,11 +119,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev3.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev3.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Radiofrecuencia facial</h5>
-							<p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostue hay en ti</p>
+							<!--p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostue hay en ti</p-->
 
 						</div>
 						<div class="clearfix"> </div>
@@ -132,11 +132,11 @@
 				<div class="col-md-4 new-more-at">
 					<div class=" new-more-at1">
 						<div class="col-md-3 about">
-							<img class="img-responsive" src="images/ev3.jpg" alt="">
+							<img class="img-responsive" src="imagess/ev3.jpg" alt="">
 						</div>
 						<div class="col-md-9 about1">
 							<h5>Vacumterapia</h5>
-							<p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p>
+							<!--p>Regenera tu piel con nuestra técnica de dermoabrasión con la cuál exfoliamos tu rostro dejando solo la piel hermosa que hay en ti</p-->
 
 						</div>
 						<div class="clearfix"> </div>
@@ -173,7 +173,7 @@
 		<div class="container">
 			<div class="col-md-6 grid-left">
 				<div class="col-md-6 grid1">
-					<img class="img-responsive" src="images/gr.jpg" alt="">
+					<img class="img-responsive" src="imagess/gr.jpg" alt="">
 				</div>
 				<div class="col-md-6 grid2">
 					<div class="grid3">
@@ -185,7 +185,7 @@
 			</div>
 			<div class="col-md-6 grid-left">
 				<div class="col-md-6 grid1">
-					<img class="img-responsive" src="images/gr1.jpg" alt="">
+					<img class="img-responsive" src="imagess/gr1.jpg" alt="">
 				</div>
 				<div class="col-md-6 grid2">
 					<div class="grid3">

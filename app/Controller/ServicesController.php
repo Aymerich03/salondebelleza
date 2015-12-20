@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Image', 'Model');
 /**
  * Services Controller
  *
@@ -14,6 +15,19 @@ class ServicesController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+
+
+public function nails(){
+	$manos = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Uñas')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('nails', $manos);
+    $this->set('imagenes', $imagenes);
+}
+
 
 /**
  * index method

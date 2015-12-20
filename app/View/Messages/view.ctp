@@ -1,49 +1,21 @@
-<div class="messages view">
-<h2><?php echo __('Message'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Autor'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['autor']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Phone'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['phone']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Email'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['email']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Body'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['body']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($message['Message']['modified']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+<div class="content-mid-top">
+	<h3>Ver el mensaje de <?php echo $message['Message']['autor'] ?> </h3>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Message'), array('action' => 'edit', $message['Message']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Message'), array('action' => 'delete', $message['Message']['id']), array(), __('Are you sure you want to delete # %s?', $message['Message']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Messages'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Message'), array('action' => 'add')); ?> </li>
-	</ul>
+<div class="container">
+	<form>
+		<div class="col-md-6 your-name">
+			<span>TU NOMBRE:</span>
+			<?php echo $this->Form->input('autor', array( 'id' => 'autor', 'label' => false, 'value' => $message['Message']['autor'], 'disabled' => 'disabled')); ?>
+		</div>
+		<div class="col-md-6 your-name">
+			<span>TU CORREO:</span>
+			<?php echo $this->Form->input('email', array( 'type' => 'text', 'label' => false, 'value' => $message['Message']['email'], 'disabled' => true )); ?>
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" your-msg">
+			<span>TU MENSAJE:</span>
+			<?php echo $this->Form->input('body', array( 'id' => 'body', 'value' => $message['Message']['body'], 'type' => 'textarea', 'rows' => 5, 'label' => false, 'disabled' => true)); ?>
+		</div>
+	</form>
+	<div class="clearfix"> </div>
 </div>

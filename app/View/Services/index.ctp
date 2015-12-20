@@ -35,7 +35,7 @@
 					<td>
 						<?php echo h($service[ 'Service'][ 'category']); ?>&nbsp;</td>
 					<td>
-						<?php echo h($service[ 'Service'][ 'type']); ?>&nbsp;</td>
+						<?php echo h($service[ 'Service'][ 'name']); ?>&nbsp;</td>
 					<td>
 						<?php echo h($service[ 'Service'][ 'description']); ?>&nbsp;</td>
 					<td>
@@ -48,7 +48,7 @@
 					<td class="actions">
 						<!--?php echo $this->Html->link(__('View'), array('action' => 'view', $service['Service']['id'])); ?-->
 						<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $service['Service']['id'])); ?>
-						<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $service['Service']['id']), array(), __('¿Desea eliminar el servicio %s?', $service['Service']['type'] , $service['Service']['id'])); ?>
+						<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $service['Service']['id']), array(), __('¿Desea eliminar el servicio %s?', $service['Service']['name'] , $service['Service']['id'])); ?>
 					</td>
 
 				</tr>

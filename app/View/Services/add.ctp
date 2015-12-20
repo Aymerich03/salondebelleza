@@ -13,9 +13,11 @@
 																							'Depilación láser' => 'Depilación láser', 'Masajes' => 'Masajes', 
 																							'Ultracavitación' => 'Ultracavitación',	'Radiofrecuencia facial' => 'Radiofrecuencia facial', 				
 																							'Vacumterapia' => 'Vacumterapia' ], 'id' => 'category', 'label' => false, 'placeholder' => 'Elige la categoría global')); ?>	</div>
+		
+		
 		<div class="col-md-6 your-name" style="width : 100%">
 			<span>TIPO:</span>
-			<?php echo $this->Form->input('type', array('id' => 'type', 'label' => false, 'placeholder' => 'Elije el tipo de servicio de la categoría anterior')); ?>
+			<?php echo $this->Form->input('name', array('id' => 'type', 'label' => false, 'placeholder' => 'Elije el tipo de servicio de la categoría anterior')); ?>
 		</div>
 		<div class="col-md-6 your-msg" style="width : 100%">
 			<span>DESCRIPCIÓN:</span>
