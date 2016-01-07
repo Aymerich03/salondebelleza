@@ -1,4 +1,4 @@
-<div class="team" id="team">
+<div class="team" id="tea">
 	<div class="container">
 		<!--SERVICIOS-->
 		<div class="content-middle" id="about">
@@ -145,8 +145,8 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
+		
 		<!-- OTROS-->
-		<!---->
 		<div class="popular" id="services">
 			<h3>The Best Beauty Services</h3>
 			<div class="container">
@@ -167,41 +167,23 @@
 		</div>		
 		
 		
-		<!--OFERTAS-->
-	</div>
-	<div class="grid">
-		<div class="container">
-			<div class="col-md-6 grid-left">
-				<div class="col-md-6 grid1">
-					<img class="img-responsive" src="imagess/gr.jpg" alt="">
-				</div>
-				<div class="col-md-6 grid2">
-					<div class="grid3">
-						<h4>Contrary to popular belief</h4>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="col-md-6 grid-left">
-				<div class="col-md-6 grid1">
-					<img class="img-responsive" src="imagess/gr1.jpg" alt="">
-				</div>
-				<div class="col-md-6 grid2">
-					<div class="grid3">
-						<h4>Contrary to popular belief</h4>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="clearfix"> </div>
+		<!--PROMOCIONES-->
 		</div>
-	</div>
-	<!---->
-
-	<!--TEAM-->
-	<!--team-->
+		<div class="grid">
+			<div class="container">
+				<div id="owl-demo">
+					
+					<?php foreach ($imagenes as $image): ?>
+	        			<?php if($image['Image']['category'] == 'Promociones'): ?>
+								<div class="item"><img src= <?php echo '/files/image/pic/' . $image['Image']['pic_dir']. '/' . 'thumb_' . $image['Image']['pic'] ?> alt="Owl Image"></div>
+						<?php endif; ?>
+	        		<?php endforeach; ?>	
+				</div>	
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	
+		<!--EQUIPO-->	
 		<div class="team" id="team">
 			<div class="container">
 				   <div class="team-main">
@@ -246,7 +228,4 @@
 				</div>
 		  </div>
 	</div>
-
-		<!--//team-->
-
 </div>

@@ -61,6 +61,7 @@ class ImagesController extends AppController {
     	$servicios = $serviceModel->find('list');
     	$this->set('servicios', $servicios);
 	}
+	
 
 /**
  * edit method

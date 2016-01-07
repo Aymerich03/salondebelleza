@@ -16,6 +16,11 @@ class ServicesController extends AppController {
  */
 	public $components = array('Paginator');
 
+public function beforeFilter()
+	{
+		parent::beforeFilter();
+		$this->Auth->allow('nails', 'mp');
+	}
 
 public function nails(){
 	$manos = $this->Service->find('all', array(
@@ -25,6 +30,94 @@ public function nails(){
     $imagenes = $imageModel->find('all');
     
     $this->set('nails', $manos);
+    $this->set('imagenes', $imagenes);
+}
+
+public function mp(){
+	$micropicmentacion = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Micropicmentación')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('mp', $micropicmentacion);
+    $this->set('imagenes', $imagenes);
+}
+
+public function da(){
+	$dermoabrasion = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Dermoabrasión')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('da', $dermoabrasion);
+    $this->set('imagenes', $imagenes);
+}
+
+public function facialcleansing(){
+	$limpiezafacial = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Limpieza facial')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('fc', $limpiezafacial);
+    $this->set('imagenes', $imagenes);
+}
+
+public function hair(){
+		$cabello = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Cabello')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('hr', $cabello);
+    $this->set('imagenes', $imagenes);
+}
+
+public function hairremoval(){
+		$depilacion = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Depilación láser')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('hrrl', $depilacion);
+    $this->set('imagenes', $imagenes);
+}
+
+public function massages(){
+		$masajes = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Masajes')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('ms', $masajes);
+    $this->set('imagenes', $imagenes);
+}
+
+public function ultracavitacion(){
+		$ultracavitacion = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Ultracavitación')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('uc', $ultracavitacion);
+    $this->set('imagenes', $imagenes);
+}
+
+public function vacumterapia(){
+		$vacumterapia = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Vacumpetapia')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('vt', $vacumterapia);
     $this->set('imagenes', $imagenes);
 }
 

@@ -7,7 +7,7 @@
 	<form>
 		<div class="col-md-6 your-name" style="width : 100%">
 			<span>TIPO:</span>
-			<?php echo $this->Form->input('category', array('class' => 'your-name', 'id' => 'category', 'options' => $servicios, 'label' => false, 'placeholder' => 'Elige la categoría global')); ?>	</div>
+			<?php echo $this->Form->input('category', array('class' => 'your-name', 'id' => 'category', 'options' => [ $servicios, 'Promociones' => 'Promociones'] , 'label' => false, 'placeholder' => 'Elige la categoría global')); ?>	</div>
 		<div class="col-md-6 your-msg" style="width : 100%">
 			<span>DESCRIPCIÓN:</span>
 			<?php echo $this->Form->input('description', array( 'id' => 'description', 'type' => 'textarea', 'rows' => 5, 'label' => false, 'placeholder' => 'Escribe cualquier info adicional que quieres decir de la foto' )); ?>

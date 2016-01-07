@@ -19,6 +19,7 @@
  */
 
 App::uses('AppController', 'Controller');
+App::uses('Image', 'Model');
 
 /**
  * Static content controller
@@ -46,6 +47,10 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  */
 	public function display() {
+		$imageModel = new Image();
+	    $imagenes = $imageModel->find('all');
+	    $this->set('imagenes', $imagenes);
+		
 		$path = func_get_args();
 
 		$count = count($path);
@@ -73,5 +78,6 @@ class PagesController extends AppController {
 			}
 			throw new NotFoundException();
 		}
+	    
 	}
 }
