@@ -19,8 +19,25 @@ class ServicesController extends AppController {
 public function beforeFilter()
 	{
 		parent::beforeFilter();
-		$this->Auth->allow('nails', 'mp');
+		$this->Auth->allow('nails', 'mp', 'da', 'facialcleansing', 'hair', 'hairremoval', 'massages', 'radiofrequency', 'ultracavitacion', 'vacumterapia', 'services');
 	}
+	
+	public function manage(){
+		
+		
+	}
+	
+	
+public function services(){
+	$limpiezafacial = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Limpieza facial')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('fc', $limpiezafacial);
+    $this->set('imagenes', $imagenes);
+}	
 
 public function nails(){
 	$manos = $this->Service->find('all', array(
@@ -41,6 +58,29 @@ public function mp(){
     $imagenes = $imageModel->find('all');
     
     $this->set('mp', $micropicmentacion);
+    $this->set('imagenes', $imagenes);
+}
+
+
+public function radiofrequency(){
+	$radiofrecuencia = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Radiofrecuencia facial')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('radiofrecuency', $radiofrecuencia);
+    $this->set('imagenes', $imagenes);
+}
+
+public function laserhairremoval(){
+	$depilacionL = $this->Service->find('all', array(
+        'conditions' => array('Service.category' => 'Depilación láser')
+    ));
+  	$imageModel = new Image();
+    $imagenes = $imageModel->find('all');
+    
+    $this->set('laserhairremoval', $depilacionL);
     $this->set('imagenes', $imagenes);
 }
 

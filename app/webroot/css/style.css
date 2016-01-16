@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6,p,label{
 	margin:0;
 }
 .header{
-	background: url(/imagess/sp5.png) no-repeat bottom;
+	background: url(/imagess/principal_opt3.png) no-repeat bottom;
 	width:100%;
 	min-height: 870px;
 	display: block;
@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6,p,label{
 	position: relative;
 }
 .header2{
-	background: url(/imagess/sp5.png) no-repeat bottom;
+	background: url(/imagess/sp55.png) no-repeat bottom;
 	width:100%;
 	min-height: 270px;
 	display: block;
@@ -352,7 +352,7 @@ figure.effect-bubba:hover p {
 /*--news letter end here--*/
 /*--grid--*/
 .grid{
-	 background: url(/imagess/ba.jpg) no-repeat;
+	 background: url(/imagess/carrusel.jpg) no-repeat;
 	 width:100%;
 	 min-height: 300px;
 	 display: block;
@@ -1038,7 +1038,7 @@ p.footer-in {
 }
 .test {
   padding: 2em 0 0;
-}
+}c
 figure.effect-bubba h4.gal {
   padding-top: 13%;
   font-size: 1.5em;
@@ -1136,6 +1136,27 @@ p.footer-class {
   width: 100%;
   padding: 0 5em;
 }
+
+.services-grid{
+	padding: 0;
+}
+
+.services-grid{
+	width: 30%;
+  float: left;
+	
+}
+
+.services-grid{
+	width: 100%;
+  padding: 0 5em;
+}
+
+.services-grid{
+	width: 100%;
+  padding: 0 2em;
+}
+
 figure.effect-bubba h4.gal {
   padding-top: 17%;
   font-size: 2em;

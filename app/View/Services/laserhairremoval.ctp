@@ -1,23 +1,23 @@
 <div class="content-mid-top">
-	<h3>Servicios para radio frecuencia facial</h3>
+	<h3>Servicios para láser depilación</h3>
 </div>
 <div class="container">
-<?php if(count($radiofrecuency)> 0): ?>
+<?php if(count($laserhairremoval)> 0): ?>
 
-<?php foreach ($radiofrecuency as $radiof): ?>
+<?php foreach ($laserhairremoval as $laserhr): ?>
 <div class="popular" id="services">
-    <h3> <?php echo $radiof['Service']['name']; ?></h3>
+    <h3> <?php echo $laserhr['Service']['name']; ?></h3>
     <div class="container">
         <div class="col-md-8 popular-grid">
             <h4><a href="#">Descripción</a></h4>
             <p>
-                <?php echo $radiof[ 'Service'][ 'description']; ?>
+                <?php echo $laserhr[ 'Service'][ 'description']; ?>
             </p>
         </div>
         <div class="col-md-4 popular-grid">
             <h4><a href="#">Precio</a></h4>
             <p>
-                <?php echo $radiof[ 'Service'][ 'price']; ?>
+                <?php echo $laserhr[ 'Service'][ 'price']; ?>
             </p>
         </div>
 
@@ -27,7 +27,7 @@
 <div class="gallery" id="gallery" style= "margin-bottom: 30px">
     <div class="gallery-top">
         <?php foreach ($imagenes as $image): ?>
-        <?php if($image['Image']['category'] == $radiof['Service']['id'] ): ?>
+        <?php if($image['Image']['category'] == $laserhr['Service']['id'] ): ?>
         <div class="col-md-4 col1 gallery-grid">
             <a href= <?php echo '/files/image/pic/' . $image['Image']['pic_dir']. '/' . 'thumb_' . $image['Image']['pic'] ?> rel="title" class="b-link-stripe b-animate-go  thickbox">
 

@@ -9,6 +9,12 @@ App::uses('Service', 'Model');
  */
 class ImagesController extends AppController {
 
+	public function beforeFilter()
+	{
+		parent::beforeFilter();
+		$this->Auth->allow('galery');
+	}
+
 /**
  * Components
  *
@@ -40,7 +46,12 @@ class ImagesController extends AppController {
 		$options = array('conditions' => array('Image.' . $this->Image->primaryKey => $id));
 		$this->set('image', $this->Image->find('first', $options));
 	}
-
+	
+	public function galery() {
+		$imagenes = $this->Image->find('all');
+	    $this->set('imagenes', $imagenes);
+	}
+	
 /**
  * add method
  *

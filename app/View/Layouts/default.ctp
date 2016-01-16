@@ -68,53 +68,60 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!--header-->
 	<?php if ($this->here == '/'): ?>
-	<div class="header">
-		<?php else: ?>
+		<!-- Imagen grande-->
+		<div class="header">
+	<?php else: ?>
+		<!-- Imagen pequeña-->
 		<div class="header2">
-			<?php endif; ?>
+	<?php endif; ?>
 			<div class="header-top">
 				<div class="container">
 					<div class="logo">
-
-						<a href="index.html"><img src="/imagess/logo.png" alt=""></a>
+						<a href="index.html"><img src="/imagess/logol.png" alt=""></a>
 					</div>
 					<div class="top-nav">
-						<!--?php debug($current_user)?-->
+						
 						<?php if ($this->here == '/users/login'): ?>
-
-
 						<?php else: ?>
-						<?php if(($current_user[ 'role'] !='administrador' ) || ($current_user==n ull)) : ?>
-
-
-						<span class="menu"><img src="/imagess/menu.png" alt=""> </span>
-						<ul>
-							<li>
-								<?=$ this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'display')) ?></li>
-							<li>
-								<?php if($this->request->here == '/'): ?>
-								<a href="#about" class="scroll">Servicios</a>
-								<?php else: ?>
-								<?=$ this->Html->link(__('Servicios'), array('controller' => 'services', 'action' => 'add')) ?>
-									<?php endif; ?>
-							</li>
-							<li>
-								<?=$ this->Html->link(__('Galería'), array('controller' => 'services', 'action' => 'galery')) ?></li>
-							<li><a href="#team" class="scroll">Profesionales</a></li>
-							<li>
-								<?=$ this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
-							<div class="clearfix"> </div>
-						</ul>
-
-						<?php else: ?>
-						<span class="menu"><img src="/imagess/menu.png" alt=""> </span>
-						<ul>
-
-							<li>
-								<?=$ this->Html->link(__('Salir'), array('controller' => 'users', 'action' => 'logout')) ?></li>
-							<div class="clearfix"> </div>
-						</ul>
-						<?php endif; ?>
+							<!--?php if(($current_user[ 'role'] !='administrador' ) || ($current_user == null)) : ?-->
+							<?php if(($this->here == '/')) : ?>
+								<span class="menu"><img src="/imagess/menu.png" alt=""> </span>
+									<ul>
+										<li class="active">
+											<?= $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'display')) ?></li>
+										<li>
+											<a href="#about" class="scroll">Servicios</a>
+										</li>
+										
+										<li>
+											<?= $this->Html->link(__('Galería'), array('controller' => 'images', 'action' => 'galery')) ?></li>
+										<li><a href="#team" class="scroll">Profesionales</a></li>
+										<li><b><a href="#promotions" class="scroll">Promociones</a></b></li>
+										<li>
+											<?= $this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
+										<?php if(($current_user[ 'role'] =='administrador' )) : ?>
+											<li><?= $this->Html->link(__('Salir'), array('controller' => 'users', 'action' => 'logout')) ?></li>	
+										<?php endif; ?>
+										<div class="clearfix"> </div>
+									</ul>
+							<?php else: ?>
+								<span class="menu"><img src="/imagess/menu.png" alt=""> </span>
+									<ul>
+										<li class="active">
+											<?= $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'display')) ?></li>
+										<li>
+											<?= $this->Html->link(__('Servicios'), array('controller' => 'services', 'action' => 'services')) ?>
+										</li>
+										<li>
+											<?= $this->Html->link(__('Galería'), array('controller' => 'images', 'action' => 'galery')) ?></li>
+										<li>
+											<?= $this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
+										<?php if(($current_user[ 'role'] =='administrador' )) : ?>
+											<li><?= $this->Html->link(__('Salir'), array('controller' => 'users', 'action' => 'logout')) ?></li>	
+										<?php endif; ?>	
+										<div class="clearfix"> </div>
+									</ul>
+							<?php endif; ?>
 						<?php endif; ?>
 						<!--script-->
 						<script>
@@ -122,45 +129,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$(".top-nav ul").slideToggle(500, function() {});
 							});
 						</script>
-
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 			</div>
 			<?php if ($this->here == '/'): ?>
-			<div class="container">
-				<div class="banner-top">
-					<div class=" new-more1">
-						<div class="col-md-2 six">
-							<img class="img-responsive" src="imagess/te.jpg" alt="">
+				<div class="container">
+					<div class="banner-top">
+						<div class=" new-more1">
+							<div class="col-md-2 six">
+								<img class="img-responsive" src="imagess/salon.jpg" alt="">
+							</div>
+							<div class="col-md-10 six1">
+								<h1>Salón & Spa D'Angelos</h1>
+								<p>En Salón D'Angelos ponemos a tu disposición un espacio integral unisex, creado especialmente para tu bienestar, belleza y salud.
+									¡Te invitamos a visitarnos o sacar tu cita mandando un mensaje en la sección de "Contáctanos"!</p>
+								<!--a href="#"><i ></i></a-->
+							</div>
+							<div class="clearfix"> </div>
 						</div>
-						<div class="col-md-10 six1">
-							<h1>It is a long established fact that</h1>
-							<p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
-							<a href="#"><i ></i></a>
-						</div>
-						<div class="clearfix"> </div>
 					</div>
 				</div>
-			</div>
 			<?php endif; ?>
 		</div>
+		
 		<!--content-->
-		<div class="content" style="margin-top: -60px">
-
-
+		<div class="content" style="margin-top: -35px">
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<!--//content-->
+		
 		<!--footer-->
 		<div class="footer">
 			<div class="container">
 				<div class="footer-top">
 					<a href="https://www.facebook.com/chineate/"><i ></i></a>
 					<p class="footer-in">Cualquier comentario, duda o sugerencia no dude en contactarnos, estamos para servirle.</p>
-					<p class="footer-class"> © 2015 Ecospa . All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a>.Diseño utilizado para Trabajo Comunal 487 2015, Universidad de Costa Rica </p>
+					<p class="footer-class"> © 2015 Ecospa. Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a>. Diseño utilizado para Trabajo Comunal 487 2015, Universidad de Costa Rica </p>
 				</div>
 				<script type="text/javascript">
 					$(document).ready(function() {
@@ -180,11 +186,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 				</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
 			</div>
 		</div>
-
-		<?php echo $this->element('sql_dump'); ?>
+	
 </body>
 
 </html>

@@ -35,7 +35,7 @@
 					<td class="actions">
 						<!--?php echo $this->Html->link(__('View'), array('action' => 'view', $image['Image']['id'])); ?-->
 						<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $image['Image']['id'])); ?>
-						<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $image['Image']['id']), array(), __('Are you sure you want to delete # %s?', $image['Image']['id'])); ?>
+						<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $image['Image']['id']), array(), __('Seguro que desea borrar la imagen?', $image['Image']['id'])); ?>
 					</td>
 				</tr>
 			<?php endforeach; ?>
