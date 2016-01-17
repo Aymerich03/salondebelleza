@@ -87,7 +87,7 @@
 						<div class="col-md-9 about1">
 							<h5>Depilación láser</h5>
 							<p>Removemos ese vello que no te gusta con depilación en el área del bikini, bigote, axilas y piernas...</p>
-							<li> <?= $this->Html->link(__('Descubre más'), array('controller' => 'services', 'action' => 'laserhairremoval')) ?></li>	
+							<li> <?= $this->Html->link(__('Descubre más'), array('controller' => 'services', 'action' => 'hairremoval')) ?></li>	
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -152,33 +152,17 @@
 		</div>
 		</br>
 		</br>
+		
+		<div id = promotions style "margin-top: -70">
 		</br>
 		</br>
-		<!-- OTROS 
-		<div class="popular" id="services">
-			<h3>The Best Beauty Services</h3>
-			<div class="container">
-				<div class="col-md-4 popular-grid">
-					<h4><a href="#">There are many variations of passages</a></h4>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-				</div>
-				<div class="col-md-4 popular-grid">
-					<h4><a href="#">There are many variations of passages</a></h4>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-				</div>
-				<div class="col-md-4 popular-grid">
-					<h4><a href="#">There are many variations of passages</a></h4>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+		</br>
 		</div>
-		-->
 		
 		
 		<!--PROMOCIONES-->
 		</div>
-		<div class="grid" id="promotions">
+		<div class="grid">
 			<div class="container">
 				<div id="owl-demo">
 					

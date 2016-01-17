@@ -1,7 +1,6 @@
-<div class="content-mid-top">
-	<h3>Edita el servicio seleccionado</h3>
-</div>
-
+<div class="popular" id="services">
+	<h3>Editar el servicio seleccionado</h3>
+	</br>
 <div class="container2">
 	<?php echo $this->Form->create('Service'); ?>
 	<form>
@@ -27,8 +26,8 @@
 			<?php echo $this->Form->input('price', array('type' => 'number', 'label' => false, 'placeholder' => 'Ingrese un número, el precio del servicio')); ?>
 		</div>
 		<div class="your-submit">
-			<?php echo $this->Form->input(__('Editar servicio'), array('type' => 'submit', 'label' => false)) ?>
+			<?php echo $this->Form->input(__('Aceptar'), array('type' => 'submit', 'label' => false)) ?>
 		</div>
 	</form>
 	<?= $this->Form->end() ?>
-</div>
+</div></div>

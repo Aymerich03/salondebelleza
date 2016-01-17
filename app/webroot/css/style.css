@@ -516,7 +516,7 @@ figure.effect-bubba:hover p {
 	  color: #dd496d;
 	  font-family: 'DancingScript-Bold';
 	  text-align: center;
-      margin: 0 0 0.8em;
+    margin: 0 0 0.3em;
 }
 .popular-grid{
 	position: relative;
@@ -547,7 +547,7 @@ figure.effect-bubba:hover p {
   	  margin: 0.5em 0 0;
 }
 .popular {
-  	padding: 5em 0;
+  	padding: 2em 0;
 }
 .content-bottom-top1 h3 {
   font-size: 2em;
@@ -662,6 +662,16 @@ figure.effect-bubba:hover p {
 }
 
 .your-name input[type="number"] {
+	width: 100%;
+	outline: none;
+	margin: 6px 0px;
+	padding: 10px;
+	background: #E6E9EC;
+	border: none;
+	border-radius: 3px;
+}
+
+.your-name input[type="password"] {
 	width: 100%;
 	outline: none;
 	margin: 6px 0px;

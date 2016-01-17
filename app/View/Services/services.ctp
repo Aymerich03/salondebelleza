@@ -1,5 +1,6 @@
 <div class="popular" id="services">
 	<h3>Elige un servicio</h3>
+	</br></br>
 	<div class="container">
 		
 		<!--servicios 1-->
@@ -56,7 +57,7 @@
 		<div class="gallery" id="gallery">
 			<div class="gallery-top">
 				<div class="col-md-4 col1 services-grid" style="margin-bottom: 8px">
-					<a href=<?php echo '/services/da'?>>
+					<a href=<?php echo '/services/hairremoval'?>>
 						<figure class="effect-bubba">
 							<img class="img-responsive" src="/imagess/we2dl.jpg" alt="">
 							<figcaption>

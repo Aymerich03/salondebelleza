@@ -4,16 +4,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<div class="content-mid-top">
-	<h3>Administración de servicios</h3>
-</div>
+<div class="popular" id="services">
+    <h3>Administración de mensajes</h3>
+    
 <div class="container">
 	<div class="table-responsive">
 		<table class="table">
 			<thead>
 				<tr>
 					<th><?php echo $this->Paginator->sort('Autor'); ?></th>
-					<th><?php echo $this->Paginator->sort('Teléfono'); ?></th>
 					<th><?php echo $this->Paginator->sort('Correo'); ?></th>
 					<th><?php echo $this->Paginator->sort('Mensaje'); ?></th>
 					<th><?php echo $this->Paginator->sort('Fecha'); ?></th>
@@ -25,13 +24,12 @@
 				<?php foreach ($messages as $message): ?>
 					<tr>
 						<td><?php echo h($message['Message']['autor']); ?>&nbsp;</td>
-						<td><?php echo h($message['Message']['phone']); ?>&nbsp;</td>
 						<td><?php echo h($message['Message']['email']); ?>&nbsp;</td>
 						<td><?php echo h($message['Message']['body']); ?>&nbsp;</td>
 						<td><?php echo h($message['Message']['created']); ?>&nbsp;</td>
 						<td class="actions">
 							<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $message['Message']['id'])); ?>
-							<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $message['Message']['id']), array(), __('Seguro que desea borrar el mensaje de '. $message['Message']['autor'] .'?', $message['Message']['id'])); ?>
+							<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $message['Message']['id']), array(), __('Seguro que desea borrar el mensaje de %s?', $message['Message']['autor'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -46,4 +44,4 @@
 		</ul>
 	</nav>
 </div>
-
+</div>

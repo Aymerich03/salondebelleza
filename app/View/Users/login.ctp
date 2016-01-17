@@ -1,6 +1,7 @@
-<div class="content-mid-top">
-    <h3>Ingrese al sistema</h3>
-</div>
+<div class="popular" id="services">
+    <h3>Ingreso al sitio</h3>
+
+
 
 <div class="container2">
     <?php echo $this->Form->create('User'); ?>
@@ -8,7 +9,6 @@
         <div class="col-md-6 your-name" style="width : 100%">
             <span>USUARIO:</span>
             <?php echo $this->Form->input('username', array('id' => 'username', 'class' => 'your-name', 'label' => false, 'placeholder' => 'Ingrese nombre de usuario')); ?> </div>
-
 
         <div class="col-md-6 your-name" style="width : 100%">
             <span>PASSWORD:</span>
@@ -19,4 +19,5 @@
         </div>
     </form>
     <?= $this->Form->end() ?>
+</div>
 </div>

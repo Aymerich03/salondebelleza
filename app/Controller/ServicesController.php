@@ -73,16 +73,6 @@ public function radiofrequency(){
     $this->set('imagenes', $imagenes);
 }
 
-public function laserhairremoval(){
-	$depilacionL = $this->Service->find('all', array(
-        'conditions' => array('Service.category' => 'Depilación láser')
-    ));
-  	$imageModel = new Image();
-    $imagenes = $imageModel->find('all');
-    
-    $this->set('laserhairremoval', $depilacionL);
-    $this->set('imagenes', $imagenes);
-}
 
 public function da(){
 	$dermoabrasion = $this->Service->find('all', array(

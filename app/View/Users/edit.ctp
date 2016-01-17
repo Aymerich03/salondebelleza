@@ -1,21 +1,17 @@
-<div class="users form">
-<?php echo $this->Form->create('User'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit User'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('username');
-	
-	
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('User.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('User.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-	</ul>
+<div class="popular" id="services">
+	<h3>Editar el administrador seleccionado</h3>
+	</br>
+	<div class="container2">
+		<?php echo $this->Form->create('User'); ?>
+		<form>
+			<div class="col-md-6 your-name" style="width : 100%">
+				<span>NOMBRE DE USUARIO:</span>
+				<?php echo $this->Form->input('id'); ?>
+				<?php echo $this->Form->input('username', array('class' => 'your-name', 'id' => 'username', 'label' => false, 'placeholder' => 'Escriba el nombre del nuevo administrador.')); ?> </div>
+			<div class="your-submit">
+				<?php echo $this->Form->input(__('Aceptar'), array('type' => 'submit', 'label' => false)) ?>
+			</div>
+		</form>
+		<?=$this->Form->end() ?>
+	</div>
 </div>

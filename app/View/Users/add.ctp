@@ -1,19 +1,20 @@
-<div class="users form">
-<?php echo $this->Form->create('User'); ?>
-	<fieldset>
-		<legend><?php echo __('Add User'); ?></legend>
-	<?php
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-	
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-	</ul>
+<div class="popular" id="services">
+	<h3>Agregar un nuevo administrador</h3>
+	</br>
+	<div class="container2">
+		<?php echo $this->Form->create('User'); ?>
+		<form>
+			<div class="col-md-6 your-name" style="width : 100%">
+				<span>NOMBRE DE USUARIO:</span>
+				<?php echo $this->Form->input('username', array('class' => 'your-name', 'id' => 'username', 'label' => false, 'placeholder' => 'Escriba el nombre del nuevo administrador.')); ?> </div>
+			<div class="col-md-6 your-name" style="width : 100%">
+				<span>CONTRASEñA:</span>
+				<?php echo $this->Form->input('password', array('class' => 'your-name', 'id' => 'password', 'label' => false, 'placeholder' => 'Escriba una contraseña para el nuevo administrador.')); ?>
+			</div>
+			<div class="your-submit">
+				<?php echo $this->Form->input(__('Agregar administrador'), array('type' => 'submit', 'label' => false)) ?>
+			</div>
+		</form>
+		<?=$this->Form->end() ?>
+	</div>
 </div>

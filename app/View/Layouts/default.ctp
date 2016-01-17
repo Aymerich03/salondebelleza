@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li>
 											<?= $this->Html->link(__('Galería'), array('controller' => 'images', 'action' => 'galery')) ?></li>
 										<li><a href="#team" class="scroll">Profesionales</a></li>
-										<li><b><a href="#promotions" class="scroll">Promociones</a></b></li>
+										<li><b><a href="#promotions" class="scroll">PROMOCIONES</a></b></li>
 										<li>
 											<?= $this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
 										<?php if(($current_user[ 'role'] =='administrador' )) : ?>
@@ -117,6 +117,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li>
 											<?= $this->Html->link(__('Contáctanos'), array('controller' => 'messages', 'action' => 'add')) ?></li>
 										<?php if(($current_user[ 'role'] =='administrador' )) : ?>
+											<li>
+												<?= $this->Html->link(__('ADMINISTRAR'), array('controller' => 'services', 'action' => 'manage')) ?></li>
+											<li>
 											<li><?= $this->Html->link(__('Salir'), array('controller' => 'users', 'action' => 'logout')) ?></li>	
 										<?php endif; ?>	
 										<div class="clearfix"> </div>

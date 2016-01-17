@@ -1,35 +1,36 @@
-<div class="content-mid-top">
-	<h3>Servicios para micropicmentación</h3>
-</div>
-<div class="container">
-<?php if(count($mp)> 0): ?>
-
-<?php foreach ($mp as $microp): ?>
 <div class="popular" id="services">
-    <h3> <?php echo $microp['Service']['name']; ?></h3>
+    <h3>Servicios de micropicmentación</h3>
     <div class="container">
-        <div class="col-md-8 popular-grid">
-            <h4><a href="#">Descripción</a></h4>
-            <p>
-                <?php echo $microp[ 'Service'][ 'description']; ?>
-            </p>
-        </div>
-        <div class="col-md-4 popular-grid">
-            <h4><a href="#">Precio</a></h4>
-            <p>
-                <?php echo $microp[ 'Service'][ 'price']; ?>
-            </p>
-        </div>
+        <?php if(count($mp)> 0): ?>
 
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<div class="gallery" id="gallery" style= "margin-bottom: 30px">
-    <div class="gallery-top">
-        <?php foreach ($imagenes as $image): ?>
-        <?php if($image['Image']['category'] == $microp['Service']['id'] ): ?>
-        <div class="col-md-4 col1 gallery-grid">
-            <a href= <?php echo '/files/image/pic/' . $image['Image']['pic_dir']. '/' . 'thumb_' . $image['Image']['pic'] ?> rel="title" class="b-link-stripe b-animate-go  thickbox">
+        <?php foreach ($mp as $microp): ?>
+        <div class="popular" id="services">
+            <h3> <?php echo $microp['Service']['name']; ?></h3>
+            <div class="container">
+                <div class="col-md-4 popular-grid">
+                    <h4><a href="#">Descripción</a></h4>
+                    <p>
+                        <?php echo $microp[ 'Service'][ 'description']; ?>
+                    </p>
+                </div>
+                <div class="col-md-8 popular-grid">
+                    <h4><a href="#">Precio</a></h4>
+                    <b>
+                        <p>
+                            ¢ <?php echo $microp[ 'Service'][ 'price']; ?>
+                        </p>
+                    </b>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="gallery" id="gallery" style="margin-bottom: 30px">
+            <div class="gallery-top">
+                <?php foreach ($imagenes as $image): ?>
+                <?php if($image[ 'Image'][ 'category']== $microp[ 'Service'][ 'id'] ): ?>
+                <div class="col-md-4 col1 gallery-grid">
+                    <a href= <?php echo '/files/image/pic/' . $image[ 'Image'][ 'pic_dir']. '/' . 'thumb_' . $image[ 'Image'][ 'pic'] ?> rel="title" class="b-link-stripe b-animate-go  thickbox">
 
                 <figure class="effect-bubba">
                     <img class="img-responsive" src= <?php echo '/files/image/pic/' . $image['Image']['pic_dir']. '/' . 'thumb_' . $image['Image']['pic'] ?> alt="" />
@@ -40,12 +41,13 @@
                     </figcaption>
                 </figure>
             </a>
+                </div>
+                <?php endif; ?>
+                <?php endforeach; ?>
+                <div class="clearfix"> </div>
+            </div>
         </div>
-        <?php endif; ?>
         <?php endforeach; ?>
-        <div class="clearfix"> </div>
+        <?php endif; ?>
     </div>
-</div>
-<?php endforeach; ?>
-<?php endif; ?>
 </div>

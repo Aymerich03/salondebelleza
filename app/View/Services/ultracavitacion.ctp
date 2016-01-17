@@ -1,6 +1,6 @@
-<div class="content-mid-top">
-	<h3>Servicios en ultracavitación</h3>
-</div>
+<div class="popular" id="services">
+    <h3>Servicios de ultracavitación</h3>
+    <div class="container">
 <div class="container">
 <?php if(count($uc)> 0): ?>
 
@@ -8,17 +8,19 @@
 <div class="popular" id="services">
     <h3> <?php echo $ultrac['Service']['name']; ?></h3>
     <div class="container">
-        <div class="col-md-8 popular-grid">
+        <div class="col-md-4 popular-grid">
             <h4><a href="#">Descripción</a></h4>
             <p>
                 <?php echo $ultrac[ 'Service'][ 'description']; ?>
             </p>
         </div>
-        <div class="col-md-4 popular-grid">
+       <div class="col-md-8 popular-grid">
             <h4><a href="#">Precio</a></h4>
-            <p>
-                <?php echo $ultrac[ 'Service'][ 'price']; ?>
-            </p>
+            <b>
+                <p>
+                     ¢ <?php echo $ultrac[ 'Service'][ 'price']; ?>
+                </p>
+            </b>
         </div>
 
         <div class="clearfix"> </div>
@@ -48,4 +50,4 @@
 </div>
 <?php endforeach; ?>
 <?php endif; ?>
-</div>
+</div></div>

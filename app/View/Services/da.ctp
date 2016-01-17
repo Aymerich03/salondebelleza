@@ -1,24 +1,25 @@
-<div class="content-mid-top">
-	<h3>Servicios para dermoabrasión</h3>
-</div>
-<div class="container">
+<div class="popular" id="services">
+    <h3>Servicios de dermoabrasión</h3>
+    <div class="container">
 <?php if(count($da)> 0): ?>
 
 <?php foreach ($da as $dermoa): ?>
 <div class="popular" id="services">
     <h3> <?php echo $dermoa['Service']['name']; ?></h3>
     <div class="container">
-        <div class="col-md-8 popular-grid">
+        <div class="col-md-4 popular-grid">
             <h4><a href="#">Descripción</a></h4>
             <p>
                 <?php echo $dermoa[ 'Service'][ 'description']; ?>
             </p>
         </div>
-        <div class="col-md-4 popular-grid">
+        <div class="col-md-8 popular-grid">
             <h4><a href="#">Precio</a></h4>
-            <p>
-                <?php echo $dermoa[ 'Service'][ 'price']; ?>
-            </p>
+            <b>
+                <p>
+                     ¢ <?php echo $dermoa[ 'Service'][ 'price']; ?>
+                </p>
+            </b>
         </div>
 
         <div class="clearfix"> </div>
@@ -48,4 +49,4 @@
 </div>
 <?php endforeach; ?>
 <?php endif; ?>
-</div>
+</div></div>

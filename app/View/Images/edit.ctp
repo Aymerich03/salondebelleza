@@ -1,6 +1,6 @@
-<div class="content-mid-top">
-	<h3>Edita una imagen</h3>
-</div>
+<div class="popular" id="services">
+	<h3>Editar la imagen seleccionada</h3>
+	</br>
 
 <div class="container2">
 	<?php echo $this->Form->create('Image', array('type' => 'file',  'novalidate' => 'novalidate')); ?>
@@ -24,8 +24,8 @@
 		</div>
 		<?php	echo $this->Form->input('pic_dir', array('type' => 'hidden')); ?>
 		<div class="your-submit">
-			<?php echo $this->Form->input(__('Aceptar edición'), array('type' => 'submit', 'label' => false)) ?>
+			<?php echo $this->Form->input(__('Aceptar'), array('type' => 'submit', 'label' => false)) ?>
 		</div>
 	</form>
 	<?= $this->Form->end() ?>
-</div>
+</div></div>
